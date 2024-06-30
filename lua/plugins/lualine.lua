@@ -5,10 +5,10 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        icons_enabled = true,
-        theme = 'tokyonight',
-        component_separators = '|',
-        section_separators = { left = '', right = '' },
+        -- icons_enabled = true,
+        theme = 'auto',
+        -- component_separators = '|',
+        -- section_separators = { left = '', right = '' },
       },
     },
   },
