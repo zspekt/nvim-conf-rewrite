@@ -13,6 +13,18 @@ return {
         keymaps = {
           ["<C-h>"] = false,
           ["<M-h>"] = "actions.select_split",
+          ["<leader>gd"] = {
+            function()
+              local oil = require "oil"
+              local config = require "oil.config"
+              if #config.columns == 1 then
+                oil.set_columns { "icon", "permissions", "size", "mtime" }
+              else
+                oil.set_columns { "icon" }
+              end
+            end,
+            "Toggle detailed view",
+          },
         },
         view_options = {
           show_hidden = true,
