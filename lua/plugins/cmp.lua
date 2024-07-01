@@ -1,7 +1,8 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    lazy = false,
+    priority = 100,
     dependencies = {
       {
         -- snippet plugin
@@ -27,6 +28,7 @@ return {
           require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
         end,
       },
+      "onsails/lspkind.nvim",
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-nvim-lsp",
