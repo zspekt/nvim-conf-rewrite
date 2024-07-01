@@ -3,15 +3,12 @@
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
---
--- -- Bootstrap lazy.nvim
--- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
--- if not (vim.uv or vim.loop).fs_stat(lazypath) then
---   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
---   vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
--- end
--- vim.opt.rtp:prepend(lazypath)
---
+
+-- Tabs vs spaces
+vim.o.tabstop = 2 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 2 -- Number of spaces inserted when indenting
 
 -- load options
 require("config.opts")
@@ -20,4 +17,4 @@ require("config.opts")
 -- require("lazy").setup("plugins")
 require("config.lazy")
 
-vim.cmd[[colorscheme  tokyonight-night]]
+vim.cmd[[colorscheme  kanagawa]]
